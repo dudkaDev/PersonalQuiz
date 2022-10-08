@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -99,7 +100,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
-                                            <action selector="singleAnswerButtonPressed:" destination="cHR-Bm-xoK" eventType="touchUpInside" id="m6y-ti-pDJ"/>
+                                            <action selector="singleAnswerButtonPressed:" destination="cHR-Bm-xoK" eventType="touchUpInside" id="3gg-7w-HWR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USH-nA-aCr">
@@ -107,7 +108,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
-                                            <action selector="singleAnswerButtonPressed:" destination="cHR-Bm-xoK" eventType="touchUpInside" id="9qf-fe-EvV"/>
+                                            <action selector="singleAnswerButtonPressed:" destination="cHR-Bm-xoK" eventType="touchUpInside" id="xYo-Ic-QrV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puz-oE-yuZ">
@@ -115,7 +116,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
-                                            <action selector="singleAnswerButtonPressed:" destination="cHR-Bm-xoK" eventType="touchUpInside" id="bVQ-MA-SgO"/>
+                                            <action selector="singleAnswerButtonPressed:" destination="cHR-Bm-xoK" eventType="touchUpInside" id="LSG-Ow-ete"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7g-ru-jZv">
@@ -123,7 +124,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
-                                            <action selector="singleAnswerButtonPressed:" destination="cHR-Bm-xoK" eventType="touchUpInside" id="Mgg-u0-LAw"/>
+                                            <action selector="singleAnswerButtonPressed:" destination="cHR-Bm-xoK" eventType="touchUpInside" id="3cn-hJ-uPc"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -203,17 +204,17 @@
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="2cG-SM-kdH">
                                         <rect key="frame" x="-2" y="0.0" width="292" height="31"/>
                                     </slider>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="154" translatesAutoresizingMaskIntoConstraints="NO" id="1da-sV-Kj3">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1da-sV-Kj3">
                                         <rect key="frame" x="0.0" y="54" width="288" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97W-r5-J9d">
-                                                <rect key="frame" x="0.0" y="0.0" width="67" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvP-KN-Xhi">
-                                                <rect key="frame" x="221" y="0.0" width="67" height="20.5"/>
+                                                <rect key="frame" x="148" y="0.0" width="140" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -273,10 +274,10 @@
                         <outlet property="rangeSlider" destination="2cG-SM-kdH" id="TRS-vd-z0c"/>
                         <outlet property="rangedStackView" destination="FUH-MV-I5p" id="YLd-Li-k5U"/>
                         <outlet property="singleStackView" destination="Gj8-MH-66T" id="tG8-XR-igK"/>
-                        <outletCollection property="singelButtons" destination="wcB-1X-oTu" collectionClass="NSMutableArray" id="wBH-qz-A9I"/>
-                        <outletCollection property="singelButtons" destination="USH-nA-aCr" collectionClass="NSMutableArray" id="Rut-hA-d6s"/>
-                        <outletCollection property="singelButtons" destination="Puz-oE-yuZ" collectionClass="NSMutableArray" id="Uq9-Fy-aXf"/>
-                        <outletCollection property="singelButtons" destination="j7g-ru-jZv" collectionClass="NSMutableArray" id="D8M-ND-ULS"/>
+                        <outletCollection property="singleButtons" destination="wcB-1X-oTu" collectionClass="NSMutableArray" id="wBH-qz-A9I"/>
+                        <outletCollection property="singleButtons" destination="USH-nA-aCr" collectionClass="NSMutableArray" id="Rut-hA-d6s"/>
+                        <outletCollection property="singleButtons" destination="Puz-oE-yuZ" collectionClass="NSMutableArray" id="Uq9-Fy-aXf"/>
+                        <outletCollection property="singleButtons" destination="j7g-ru-jZv" collectionClass="NSMutableArray" id="D8M-ND-ULS"/>
                         <outletCollection property="multipleLabels" destination="Abb-cK-MhK" collectionClass="NSMutableArray" id="mPA-6N-7T2"/>
                         <outletCollection property="multipleLabels" destination="LeF-no-cVO" collectionClass="NSMutableArray" id="avb-xW-OLJ"/>
                         <outletCollection property="multipleLabels" destination="iek-Da-bWO" collectionClass="NSMutableArray" id="fvp-l3-hlV"/>
