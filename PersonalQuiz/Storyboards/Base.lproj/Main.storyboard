@@ -260,13 +260,7 @@
                             <constraint firstItem="CSv-cM-xBg" firstAttribute="centerY" secondItem="nZT-Tw-fPn" secondAttribute="centerY" id="yre-Tw-8H3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Вопрос №" id="VPG-mt-bDm">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="uNj-be-0y1">
-                            <connections>
-                                <segue destination="SPp-lZ-EeN" kind="show" id="K9j-Qo-cve"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Вопрос №" id="VPG-mt-bDm"/>
                     <connections>
                         <outlet property="multipleStackView" destination="CSv-cM-xBg" id="dHz-Hc-Wbc"/>
                         <outlet property="questionLabel" destination="AB4-SA-Pij" id="psQ-z5-kfh"/>
@@ -312,13 +306,17 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы тыква!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGd-al-2Oy">
-                                        <rect key="frame" x="104.5" y="70" width="79" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы тыква!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGd-al-2Oy">
+                                        <rect key="frame" x="16" y="70" width="256" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vGd-al-2Oy" secondAttribute="trailing" constant="16" id="9zm-W7-DR1"/>
+                                    <constraint firstItem="vGd-al-2Oy" firstAttribute="leading" secondItem="mro-4E-shj" secondAttribute="leading" constant="16" id="LIs-cS-rRf"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kdu-zr-3nB"/>
@@ -329,7 +327,17 @@
                             <constraint firstItem="mro-4E-shj" firstAttribute="centerY" secondItem="18U-SR-hAe" secondAttribute="centerY" id="p0o-6O-KdP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Результат" id="kez-f4-ccp"/>
+                    <navigationItem key="navigationItem" title="Результат" id="kez-f4-ccp">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="XaE-RH-7mA">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="SPp-lZ-EeN" id="eht-eV-G8H"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="descriptionResultLabel" destination="vGd-al-2Oy" id="kcQ-KT-yzu"/>
+                        <outlet property="resultOfAnswerLabel" destination="9SZ-B2-JH8" id="QQs-2W-gfe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oq3-Xr-oKZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -354,9 +362,6 @@
             <point key="canvasLocation" x="900" y="-2"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="hEr-0j-PuY"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
